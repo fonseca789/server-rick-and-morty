@@ -1,0 +1,18 @@
+GET http://localhost:3001/rickandmorty/character/12
+
+
+###
+GET http://localhost:3001/rickandmorty/login?email=correo@correo.com&password=1234 HTTP/1.1
+
+###
+POST http://localhost:3001/rickandmorty/fav HTTP/1.1
+Content-Type: application/json
+
+{
+   "name": "pedro",
+   "type": "dad",
+   "id" : 3
+}
+
+####
+DELETE http://localhost:3001/rickandmorty/fav/1 HTTP/1.1
