@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node ./src/index.js",
-    "dev": "nodemo ./src/index.js"
+    "vercel-build": "echo Hello"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.33.0",
     "uuid": "^9.0.1",
-    "v4": "^0.0.1"
+    "v4": "^0.0.1",
+    "vercel": "^32.3.1"
   }
 }
