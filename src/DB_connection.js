@@ -7,7 +7,7 @@ const FavoriteModel = require("./models/Favorite");
 // EJERCICIO 03
 // A la instancia de Sequelize le falta la URL de conexión. ¡Agrégala!
 // Recuerda pasarle la información de tu archivo '.env'.
-
+//
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
 const POSTGRES_URL = process.env.POSTGRES_URL
 const sequelize = new Sequelize(
