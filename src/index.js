@@ -27,7 +27,7 @@ server.use("/", (req, res) => {
   res.status(404).send("Resource not found");
 });
 
-conn.sync({force: true}).then(() => {
+conn.sync({force: false}).then(() => {
   server.listen(PORT, () => {
     console.log("Server raised in port: " + PORT);
   });

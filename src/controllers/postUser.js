@@ -5,7 +5,7 @@ const postUser = async (req, res) => {
   const { email, password } = req.body;
   const validarEmailPassword = validate(email, password);
   if (!validarEmailPassword) {
-    res.status(404).json(validarEmailPassword);
+    return res.status(404).json(validarEmailPassword);
   } else {
     try {
       const [user, created] = await User.findOrCreate(
@@ -21,13 +21,13 @@ const postUser = async (req, res) => {
       );
       if(created) {
 
-        res.status(201).json({ usuario: user.email, crearUserDone: true });
+       return res.status(201).json({ usuario: user.email, crearUserDone: true });
       }
       else {
-        res.status(400).json({"usuario ya existe": user.email, crearUserDone: false})
+       return res.status(400).json({"usuario ya existe": user.email, crearUserDone: false})
       }
     } catch (error) {
-      res.status(500).json({ message: error.message });
+      return res.status(500).json({ message: error.message });
     }
   }
   // res.json(validarEmailPassword);

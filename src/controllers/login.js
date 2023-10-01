@@ -9,9 +9,8 @@ const login = async (req, res) => {
   }
   try {
     const user = await User.findOne({ where: { email } });
-    if (!user) {
-      
-      return res.status(404).json({message: "Email Not Registre"});
+    if (!user) {      
+      return res.status(404).json({access: false});
     }
     if (user.password === password) {
       process.env.SESSION = user.id;
